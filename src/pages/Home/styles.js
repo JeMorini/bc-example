@@ -28,3 +28,8 @@ export const ContainerGrid = styled.div`
     position: relative;
   }
 `;
+
+export const SkeletonContainer = styled.div`
+  width: 100%;
+  margin: 1rem;
+`;

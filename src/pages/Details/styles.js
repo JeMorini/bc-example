@@ -103,3 +103,8 @@ export const TitleRecommended = styled.h1`
   text-align: center;
   height: 1.5rem;
 `;
+
+export const SkeletonContainer = styled.div`
+  width: 100%;
+  margin: 1rem;
+`;

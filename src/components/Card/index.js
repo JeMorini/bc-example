@@ -7,7 +7,6 @@ import {
   PriceCard,
   ImageCard,
   Button,
-  TextButton,
   ContainerPrice,
 } from './styles';
 
@@ -23,13 +22,14 @@ export default function Card({ data }) {
       {/* <ContainerPrice> */}
       <PriceCard>R${data.price}</PriceCard>
       <ContainerPrice>
-        <Button color={'#642580'} hoverColor={'#400c58'}>
+        <Button color="#642580" hoverColor="#400c58">
           <BiCartAlt size={30} color="#FFF" />
         </Button>
-        <Button color={'#faae00'} hoverColor={'#9e6e00'}>
+        <Button color="#faae00" hoverColor="#9e6e00">
           <BiHeart size={30} color="#FFF" />
         </Button>
       </ContainerPrice>
+
       {/* </ContainerPrice> */}
     </ContainerCard>
   );
