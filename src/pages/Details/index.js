@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { BiCartAlt, BiHeart } from 'react-icons/bi';
 import api from '../../services/api';
+import LogoBC from '../../components/LogoBC';
 import {
   Container,
   Image,
@@ -11,7 +12,6 @@ import {
   CategoryData,
   Button,
   TextButton,
-  Logo,
   ContainerFlex,
 } from './styles';
 
@@ -23,7 +23,6 @@ export default function Details() {
       await api
         .get(`/example/products/${id}`)
         .then((response) => {
-          console.log(response.data);
           setData(response.data);
         })
         .catch((err) => console.log(err));
@@ -31,9 +30,7 @@ export default function Details() {
   }, [id]);
   return (
     <Container>
-      <Logo
-        src={`https://portalfranchising.com.br/wp-content/uploads/2019/09/bomcupom-marca.png`}
-      />
+      <LogoBC />
       <ContainerFlex>
         <Image src={data?.photo_url} />
         <ContainerDetails>
@@ -42,11 +39,11 @@ export default function Details() {
           </CategoryData>
           <Title>{data?.name}</Title>
           <DetailsData>{data?.description}</DetailsData>
-          <Button color={'#642580'} hoverColor={'#400c58'}>
+          <Button color="#642580" hoverColor="#400c58">
             <BiCartAlt size={30} color="#FFF" />
             <TextButton>Comprar</TextButton>
           </Button>
-          <Button color={'#faae00'} hoverColor={'#9e6e00'}>
+          <Button color="#faae00" hoverColor="#9e6e00">
             <BiHeart size={30} color="#FFF" />
             <TextButton>Favoritos</TextButton>
           </Button>

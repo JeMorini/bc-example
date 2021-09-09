@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import api from '../../services/api';
 import Card from '../../components/Card';
-import { Container, Logo, ContainerGrid } from './styles';
+import LogoBC from '../../components/LogoBC';
+import { Container, ContainerGrid } from './styles';
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -18,9 +19,7 @@ export default function Home() {
   }, []);
   return (
     <Container>
-      <Logo
-        src={`https://portalfranchising.com.br/wp-content/uploads/2019/09/bomcupom-marca.png`}
-      />
+      <LogoBC />
       <ContainerGrid>
         {data.map((item) => (
           <Card data={item} />

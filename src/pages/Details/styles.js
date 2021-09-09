@@ -83,8 +83,3 @@ export const TextButton = styled.h1`
   font-weight: bold;
   margin-left: 1rem;
 `;
-
-export const Logo = styled.img`
-  height: 5rem;
-  width: 25rem;
-`;

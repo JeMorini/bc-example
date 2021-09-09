@@ -7,6 +7,7 @@ export const Container = styled.div`
   justify-content: center;
   /* background-color: #0002; */
   padding: 1rem;
+  cursor: pointer;
 `;
 
 export const ContainerGrid = styled.div`
@@ -22,9 +23,4 @@ export const ContainerGrid = styled.div`
     flex-direction: column;
     position: relative;
   }
-`;
-
-export const Logo = styled.img`
-  height: 5rem;
-  width: 25rem;
 `;
