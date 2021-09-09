@@ -13,11 +13,17 @@ import {
   Button,
   TextButton,
   ContainerFlex,
+  TitleRecommended,
+  ContainerRecommended,
 } from './styles';
+import Card from '../../components/Card';
 
 export default function Details() {
   const [data, setData] = useState([]);
+  const [recommended, setRecommended] = useState([]);
   const { id } = useParams();
+  window.scrollTo(0, 0);
+
   useEffect(() => {
     (async () => {
       await api
@@ -28,6 +34,17 @@ export default function Details() {
         .catch((err) => console.log(err));
     })();
   }, [id]);
+
+  useEffect(() => {
+    (async () => {
+      api
+        .get('/example/products')
+        .then((response) => {
+          setRecommended(response.data);
+        })
+        .catch((err) => console.log(err));
+    })();
+  }, [api]);
   return (
     <Container>
       <LogoBC />
@@ -49,6 +66,12 @@ export default function Details() {
           </Button>
         </ContainerDetails>
       </ContainerFlex>
+      <TitleRecommended>Recomendados</TitleRecommended>
+      <ContainerRecommended>
+        {recommended.slice(0, 3).map((item) => (
+          <Card data={item} />
+        ))}
+      </ContainerRecommended>
     </Container>
   );
 }

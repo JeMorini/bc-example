@@ -8,6 +8,10 @@ export const Container = styled.div`
   /* background-color: #0002; */
   padding: 1rem;
   cursor: pointer;
+
+  @media (max-width: 320px) {
+    padding: 0rem;
+  }
 `;
 
 export const ContainerGrid = styled.div`

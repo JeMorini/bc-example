@@ -83,3 +83,23 @@ export const TextButton = styled.h1`
   font-weight: bold;
   margin-left: 1rem;
 `;
+
+export const ContainerRecommended = styled.div`
+  display: grid;
+  grid-template-columns: 26rem 26rem 26rem;
+  @media (max-width: 1200px) {
+    grid-template-columns: 26rem 26rem;
+  }
+  @media (max-width: 800px) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+`;
+
+export const TitleRecommended = styled.h1`
+  font-size: 2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  height: 1.5rem;
+`;

@@ -15,7 +15,8 @@ export default function Card({ data }) {
   const history = useHistory();
   const handleNavigateToDetails = useCallback(() => {
     history.push(`/details/${data.id}`);
-  }, []);
+    console.log(data.id);
+  }, [data]);
   return (
     <ContainerCard onClick={handleNavigateToDetails}>
       <ImageCard src={data.photo_url} />

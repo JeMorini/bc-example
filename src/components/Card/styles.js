@@ -10,9 +10,13 @@ export const ContainerCard = styled.div`
   border-radius: 0.3rem;
   background-color: #fff;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  cursor: pointer;
   :hover {
     transition: 1s;
     background-color: #0001;
+  }
+  @media (max-width: 400px) {
+    width: 18rem;
   }
 `;
 
@@ -41,6 +45,10 @@ export const ImageCard = styled.img`
   width: 22rem;
   margin: 1rem;
   border-radius: 1rem;
+  @media (max-width: 400px) {
+    width: 15rem;
+    height: 12rem;
+  }
 `;
 
 export const Button = styled.div`
